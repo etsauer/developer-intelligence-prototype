@@ -10,7 +10,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
-import { Orbit, FileCode, Clock } from "lucide-react"
+import { Orbit, FileCode, CalendarCheck, Blocks, Fingerprint } from "lucide-react"
 import useDeploymentFrequencyData from './deploymentFrequency';
 import { dateFormatter } from '@/lib/date-funcs';
 
@@ -37,17 +37,17 @@ export function DeploymentFrequencyTable({ dateRange, appName }) {
           <TableRow key={image}>
             <TableCell>
               <div className="flex items-center gap-2">
-                <Orbit className="w-4 h-4" />{appName}
+                <Blocks className="w-4 h-4" />{appName}
               </div>
             </TableCell>
             <TableCell>
               <div className="flex items-center gap-2">
-                <FileCode className="w-4 h-4" /> {image}
+                <Fingerprint className="w-4 h-4" /> {image}
               </div>
             </TableCell>
             <TableCell>
               <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4" /> { dateFormatter(timestamp) }
+                <CalendarCheck className="w-4 h-4" /> { dateFormatter(timestamp) }
               </div>
             </TableCell>
           </TableRow>

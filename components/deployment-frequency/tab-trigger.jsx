@@ -1,6 +1,6 @@
 'use client'
 
-import { Rocket, ArrowDown, ArrowUp } from 'lucide-react'
+import { Rocket, ArrowUp } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
 import { InfoTooltip } from '@/components/info-tooltip'
 import { DeploymentFrequencyRating } from '@/components/deployment-frequency/rating'

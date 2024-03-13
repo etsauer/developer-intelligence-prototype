@@ -18,7 +18,7 @@ import {
 import { DeploymentFrequencyChart } from '@/components/deployment-frequency/chart'
 import { LeadTimeForChangeChart } from '@/components/lead-time-for-change/chart'
 import { IsolatedChangeFailureRateChart } from '@/components/change-failure-rate/iso-chart'
-import { IsolatedMeanTimeToRecoveryChart } from '@/components/mean-time-to-recovery/iso-chart'
+import { MeanTimeToRecoveryChart } from '@/components/mean-time-to-recovery/chart'
 
 import { DeploymentFrequencyTabTrigger } from './deployment-frequency/tab-trigger'
 import { ChangeFailureRateTabTrigger } from './change-failure-rate/tab-trigger'
@@ -170,14 +170,14 @@ export function Dashboard({ data, appList }) {
             </TabsContent>
             <TabsContent value="dora-mttr" className="p-6 mt-8">
               <div className="h-64">
-                <IsolatedMeanTimeToRecoveryChart data={dataMeanTimeToRecovery} />
+                <MeanTimeToRecoveryChart dateRange={activeDateRange} appName={activeApp} />
               </div>
               <div className="mt-8">
                 <h2 className="flex items-center gap-2 mb-4 font-semibold dark:text-white">
                   <TableIcon />
                   Pull requests
                 </h2>
-                <MeanTimeToRecoveryTable />
+                <MeanTimeToRecoveryTable dateRange={activeDateRange} appName={activeApp} />
               </div>
             </TabsContent>
           </Tabs>

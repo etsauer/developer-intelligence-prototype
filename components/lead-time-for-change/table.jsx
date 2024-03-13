@@ -10,7 +10,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
-import { Calendar, GitBranch, GitCommit, Globe, Timer } from "lucide-react"
+import { Calendar, GitCommit, GitGraph, Timer } from "lucide-react"
 import { getDaysBetweenDates } from '@/components/date-range-selector'
 import {dateFormatter, dayFormatter} from '@/lib/date-funcs';
 
@@ -39,12 +39,12 @@ export function LeadTimeForChangeTable({ dateRange, appName }) {
           <TableRow key={commit}>
             <TableCell>
               <div className="flex items-center gap-2">
-                <GitBranch className="w-4 h-4" /> {commit}
+                <GitGraph className="w-4 h-4" /> {commit}
               </div>
             </TableCell>
             <TableCell>
               <div className="flex items-center gap-2">
-                <Globe className="w-4 h-4" /> { dateFormatter(timestamp) }
+                <Calendar className="w-4 h-4" /> { dateFormatter(timestamp) }
               </div>
             </TableCell>
             <TableCell>
